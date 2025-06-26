@@ -1,0 +1,27 @@
+{
+  "name": "blog-writing-project",
+  "version": "1.0.0",
+  "description": "A blog writing project with templates and automation tools",
+  "main": "index.js",
+  "scripts": {
+    "new-post": "node scripts/new-post.js",
+    "publish": "node scripts/publish.js",
+    "preview": "node scripts/preview.js",
+    "build": "node scripts/build.js",
+    "automation": "node automation/playwright/playwright-runner.js",
+    "auto:naver": "node automation/playwright/naver/run-naver.js",
+    "auto:tistory": "node automation/playwright/tistory/run-tistory.js"
+  },
+  "keywords": ["blog", "writing", "content", "markdown"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "marked": "^4.3.0",
+    "front-matter": "^4.0.2",
+    "date-fns": "^2.30.0",
+    "dotenv": "^16.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
