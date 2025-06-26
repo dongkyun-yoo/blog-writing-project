@@ -1,0 +1,6 @@
+{
+  "success": false,
+  "timestamp": "2025-06-26T18:24:41.500Z",
+  "error": "Failed to launch the browser process! spawn /root/.cache/puppeteer/chrome/linux-137.0.7151.119/chrome-linux64/chrome ENOENT\n\n\nTROUBLESHOOTING: https://pptr.dev/troubleshooting\n",
+  "stack": "Error: Failed to launch the browser process! spawn /root/.cache/puppeteer/chrome/linux-137.0.7151.119/chrome-linux64/chrome ENOENT\n\n\nTROUBLESHOOTING: https://pptr.dev/troubleshooting\n\n    at ChildProcess.onClose (/mnt/e/blog-writing-project/node_modules/@puppeteer/browsers/lib/cjs/launch.js:325:24)\n    at ChildProcess.emit (node:events:519:28)\n    at ChildProcess._handle.onexit (node:internal/child_process:292:12)\n    at onErrorNT (node:internal/child_process:484:16)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)"
+}

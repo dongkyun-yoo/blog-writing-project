@@ -1,0 +1,30 @@
+
+name: Tistory Auto Posting
+
+on:
+  workflow_dispatch:
+    inputs:
+      post_title:
+        description: 'Post Title'
+        required: true
+        default: '2025년 일본 소도시 여행 전략 가이드'
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          
+      - name: Install dependencies
+        run: npm install puppeteer dotenv
+        
+      - name: Run auto posting
+        env:
+          KAKAO_EMAIL: ${{ secrets.KAKAO_EMAIL }}
+          KAKAO_PASSWORD: ${{ secrets.KAKAO_PASSWORD }}
+        run: node tistory-puppeteer-post.js
